@@ -1,0 +1,15 @@
+Câu 1: Mô tả Cross-Site Scripting
+	-Cross-Site Scripting (XSS) là một trong những kĩ thuật tấn công phổ biến nhất hiện nay, kỹ thuật này được liệt vào danh sách những kỹ thuật tấn công nguy hiểm nhất với ứng dụng web.
+	-Cross-Site Scripting là một lỗi bảo mật cho phép người tấn công (Attacker, Hacker,…) chèn các đoạn script nguy hiểm vào trong source code ứng dụng web. Nhằm thực thi các đoạn mã độc Javascript để chiếm phiên đăng nhập của người dùng.
+	-Là các Web-master/Developer khi phát triển một Website không thể chủ quan, coi thường những lỗ hổng cơ bản như XSS, luôn cẩn trọng trong việc xử lý các nơi dữ liệu đầu vào từ người dùng như Form đăng nhập, đăng ký, tìm kiếm thông tin,… Lọc tất cả dữ liệu trước khi lưu vào cơ sở dữ liệu hoặc khi in ra trên trang web.
+
+Câu 2: Cách để hạn chế hình thức tấn công qua File Upload:
+	-Giới hạn các loại tệp mà bạn cho phép tải lên ở những loại cần thiết cho trải nghiệm người dùng.
+	-Sử dụng bộ lọc whitelist(Một bộ lọc đặc biệt được dùng khi xử lý thư rác hay thông tin vô ích/có hai khác) để loại bỏ những extension đem lại rủi ro.
+	-Ứng dụng sẽ thực hiện việc lọc và kiểm tra nội dung của file được tải lên và loại bỏ trực tiếp nếu phát hiện nguy cơ rủi ro.
+	-Giới hạn quyền của thư mục . Tức là tệp được tải lên sẽ không có bất kì quyền "thực thi" nào đối với ứng dụng,website và tự động loại bỏ nếu có.
+
+Câu 3: CSRF là gì?
+	-CSRF hay còn gọi là kỹ thuật tấn công “Cross-site Request Forgery“, nghĩa là kỹ thuật tấn công giả mạo chính chủ thể của nó. CSRF nói đến việc tấn công vào chứng thực request trên web thông qua việc sử dụng Cookies. Đây là nơi mà các hacker có khả năng sử dụng thủ thuật để tạo request mà bạn không hề biết. 
+		Vì vậy, một CSRF là hacker lạm dụng sự tin tưởng của một ứng dụng web trên trình duyệt của nạn nhân.
+	-CSRF là một kiểu tấn công gây sự nhầm lẫn tăng tính xác thực và cấp quyền của nạn nhân khi gửi một request giả mạo đến máy chủ. Vì thế một lỗ hổng CSRF ảnh hưởng đến các quyền của người dùng ví dụ như quản trị viên, kết quả là chúng truy cập được đầy đủ quyền.	
